@@ -1,10 +1,11 @@
 import 'dart:io';
 
 main() {
-  stdout.write("Insira o primeiro valor: ");
-  int x = int.parse(stdin.readLineSync()!);
-  stdout.write("Insira o segundo valor: ");
-  int y = int.parse(stdin.readLineSync()!);
+  stdout.write("Informe o primeiro valor: ");
+  int x = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
 
-  print("$x + $y = ${x + y}");
+  stdout.write("Informe o segundo valor: ");
+  int y = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+
+  print("A soma de $x + $y é: ${(x + y)}");
 }
