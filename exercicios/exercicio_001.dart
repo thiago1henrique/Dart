@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
-  print("Alo mundo");
+  stdout.write("Olá mundo");
 }
