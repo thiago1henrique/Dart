@@ -3,6 +3,15 @@ class Data {
   int? mes;
   int? ano;
 
+/*  Data(int dia, int mes, int ano) {
+    this.dia = dia;
+    this.mes = mes;
+    this.ano = ano;
+  }*/
+
+  Data([this.dia = 1, this.mes = 1, this.ano = 1970]);
+  Data.com({this.dia = 1, this.mes = 1, this.ano = 1970});
+
   String obter() {
     return ("$dia/$mes/$ano");
   }
@@ -13,10 +22,6 @@ class Data {
 }
 
 main() {
-  Data dataAniversario = new Data();
-  dataAniversario.dia = 13;
-  dataAniversario.mes = 1;
-  dataAniversario.ano = 2000;
-
+  Data dataAniversario = new Data(13);
   print(dataAniversario);
 }
